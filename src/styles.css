@@ -1,4 +1,150 @@
-/* You can add global styles to this file, and also import other style files */
+/* reset.css file */
+* { margin:0; padding:0; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; }
+
+body{ text-align:left; font-weight:400; font-size:14px; line-height:24px;font-family: $font-family; color:$txt-color; background: $body-bg-color;}
+html body{font-family: $font-family;  }
+img           { border:0; vertical-align:top; max-width:100%; }
+a, button,input[type='submit'],input[type='button']{ cursor:pointer; }
+a             { text-decoration:none; }
+a:hover       { text-decoration:none !important; }
+
+/* Headings */
+h1,h2,h3,
+h4,h5,h6      { margin:0 0 5px; line-height:1.35;font-family: $font-family !important;}
+h1            { font-size:20px; font-weight:400; }
+h2            { font-size:18px; font-weight:400; }
+h3            { font-size:16px; font-weight:700; }
+h4            { font-size:14px; font-weight:700; }
+h5            { font-size:12px; font-weight:700; }
+h6            { font-size:10px; font-weight:700; }
+
+/* Forms */
+form          { display:inline; }
+fieldset      { border:0; }
+legend        { display:none; }
+
+/* Table */
+table         { border:0; border-collapse:collapse; border-spacing:0; empty-cells:show; font-size:100%; }
+caption,th,td { vertical-align:top; text-align:left; font-weight:normal; }
+
+/* Content */
+p             { margin:0 0 10px; }
+strong        { font-weight:bold; }
+address       { font-style:normal; line-height:1.35; }
+cite          { font-style:normal; }
+q,
+blockquote    { quotes:none; }
+q:before,
+q:after       { content:''; }
+small,big     { font-size:1em; }
+sup           { font-size:1em; vertical-align:top; }
+
+/* Lists */
+ul,ol         { list-style:none; }
+
+/* common.css file */
+
+/* Tools */
+.hidden       { display:block !important; border:0 !important; margin:0 !important; padding:0 !important; font-size:0 !important; line-height:0 !important; width:0 !important; height:0 !important; overflow:hidden !important; }
+.nobr         { white-space:nowrap !important; }
+.wrap         { white-space:normal !important; }
+.a-left       { text-align:left !important; }
+.a-center     { text-align:center !important; }
+.a-right      { text-align:right !important; }
+.v-top        { vertical-align:top; }
+.v-middle     { vertical-align:middle; }
+.f-left,
+.left         { float:left !important; }
+.f-right,
+.right        { float:right !important; }
+.f-none       { float:none !important; }
+.f-fix        { float:left; width:100%; }
+.f-block      { display:inline-block; vertical-align:top; width:100%; }
+.no-display   { display:none; }
+.no-margin    { margin:0 !important; }
+.no-marginL   { margin-left:0 !important; }
+.no-marginR   { margin-right:0 !important; }
+.no-marginT   { margin-top:0 !important; }
+.no-marginB   { margin-bottom:0 !important; }
+.no-padding   { padding:0 !important; }
+.no-paddingR  { padding-right:0 !important; }
+.no-paddingL  { padding-left:0 !important; }
+.no-bg        { background:none !important; }
+.container    { max-width:1230px; width:100%; }
+.clear        { clear:both; }
+.ul-left li   { float:left; }
+.ul-right li  { float:right; }
+
+.push-down-1  {margin-top:10px;}
+.push-down-2  {margin-top:20px;}
+.push-down-3  {margin-top:30px;}
+.push-down-4  {margin-top:40px;}
+.push-down-5  {margin-top:50px;}
+.push-down-6  {margin-top:60px;}
+.push-down-7  {margin-top:70px;}
+.push-down-8  {margin-top:80px;}
+.push-down-9  {margin-top:90px;}
+.push-down-10 {margin-top:100px;}
+
+/* Input focus reset */
+.form-control:focus { box-shadow: none; }
+
+/* Placeholder Colors */
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $txt-color-placeholder;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $txt-color-placeholder;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $txt-color-placeholder;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $txt-color-placeholder;
+}
+input::placeholder, textarea::placeholder {
+  color: $txt-color-placeholder !important;
+}
+
+/*CSS for loading bar*/
+
+.turnrx-loading-bar {
+  position: absolute;
+  top: 0;
+  left:0;
+
+  .loader {
+    height: 8px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #ddd;
+  }
+
+  .loader:before{
+    display: block;
+    position: absolute;
+    content: "";
+    left: -200px;
+    width: 200px;
+    height: 8px;
+    background: $primary-color;
+    background: linear-gradient(90deg, $secondary-color, $primary-color);
+    animation: loading 2s linear infinite;
+  }
+
+  @keyframes loading {
+    from {left: -200px; width: 30%;}
+    50% {width: 30%;}
+    70% {width: 40%;}
+    80% { left: 70%;}
+    95% {left: 120%;}
+    to {left: 100%;}
+  }
+}
+
+
+/* jqxgrid custom styling */
 .jqx-widget-custom
 {
   font-family: 'Open Sans', sans-serif !important;

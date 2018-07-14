@@ -4083,6 +4083,12 @@
       "search": [
         "file-cabinet-"
       ]
+    },
+    {
+      "uid": "9e22a8a67fe3b88cdd5e4253c85debdb",
+      "css": "th-1",
+      "code": 59555,
+      "src": "websymbols"
     }
   ]
 }
